@@ -16,11 +16,11 @@ RUN raco pkg install --auto compiler-lib ./demo-web-server && raco exe run.rkt &
 # use archlinux as runtime env
 FROM archlinux/archlinux
 
-# copy exe to runtime env
-COPY --from=build-env /app /app
+# copy exe to runtime env we only need the built
+COPY --from=build-env /app/dist /app
 
 # set working directory to the distribution bin
-WORKDIR /app/dist/bin
+WORKDIR /app/bin
 
 # expose 8081
 EXPOSE 8081

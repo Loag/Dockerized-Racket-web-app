@@ -4,8 +4,9 @@
 
 ## includes:
   - Web app as a package to manage dependencies.
-  - builder/distribution Dockerfile build process (dist on arch linux)
-  - production distribution build of racket app
+  - builder/distribution Dockerfile build process (dist on arch linux).
+  - production distribution build of racket app.
+  - only include the production build in the runtime container.
   - Make for convenience.
 
 ## Usage:
